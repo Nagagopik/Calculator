@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULATOR</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script>
+        function ac() {
+            document.getElementById("res").value = "";
+        }
+        function show(input) {
+            document.getElementById("res").value += input;
+        }
+
+        function cal() {
+            var output = eval(document.getElementById("res").value);
+            document.getElementById("res").value = output;
+        }
+
+
+    </script>
+
+</head>
+
+<body>
+    <h1>CALCULATOR</h1>
+
+    <div class="cantainer">
+        <div class="calculator">
+            <input type="text" id="res"><br>
+
+            <button class="show" onclick="show('/')">/</button>
+            <button class="show" onclick="show('(')">(</button>
+            <button class="show" onclick="show(')')">)</button>
+            <button class="show" onclick="ac()">AC</button>
+
+
+            <button class="nums" onclick="show('7')">7</button>
+            <button class="nums" onclick="show('8')">8</button>
+            <button class="nums" onclick="show('9')">9</button>
+            <button class="show" onclick="show('*')">*</button>
+
+
+            <button class="nums" onclick="show('4')">4</button>
+            <button class="nums" onclick="show('5')">5</button>
+            <button class="nums" onclick="show('6')">6</button>
+            <button class="show" onclick="show('-')">-</button>
+
+            <button class="nums" onclick="show('1')">1</button>
+            <button class="nums" onclick="show('2')">2</button>
+            <button class="nums" onclick="show('3')">3</button>
+            <button class="show" onclick="show('+')">+</button>
+
+            <button class="nums" onclick="show('0')">0</button>
+            <button class="nums" onclick="show('00')">00</button>
+            <button class="nums" onclick="show('.')">.</button>
+            <button class="show" onclick="cal('=')">=</button>
+
+
+
+
+        </div>
+
+    </div>
+
+
+
+
+</body>
+
+</html>
